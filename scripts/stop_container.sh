@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
 
-# Stop the running container (if any)
-echo "Hi"
+CONTAINER_NAME="flask_container"
+
+# Stop and remove the container if it exists
+docker rm -f $CONTAINER_NAME 2>/dev/null || true
