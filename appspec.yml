@@ -1,6 +1,10 @@
 version: 0.0
 os: linux
 
+files:
+  - source: /
+    destination: /home/ubuntu/app   # or any directory you want on EC2
+
 hooks:
   ApplicationStop:
     - location: scripts/stop_container.sh
